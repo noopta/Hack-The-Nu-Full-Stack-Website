@@ -1,0 +1,157 @@
+<script>
+	//to grab json data
+	$(document).ready(function () {
+		console.log("Start jQuery");
+
+		$.getJSON("events.json", function (data) { //data parameter is where you start.
+			console.log(data); //shows entire json file in console.
+
+			//Grabbing web scrape data in loop
+			for (let i = 0; i < data.length; i++) {
+				$("#row1").children('li').eq(i).html('<a style="text-decoration:none;" href="' + data[i + 80]['Event Link'] + '" target="_blank"><img src="' + data[i + 80]['Event Picture'] + '" style="height:100px;"/></a>');
+				$("#row2").children('li').eq(i).html('<a style="text-decoration:none;" href="' + data[i + 20]['Event Link'] + '" target="_blank"><img src="' + data[i + 20]['Event Picture'] + '" style="height:100px;"/></a>');
+				$("#row3").children('li').eq(i).html('<a style="text-decoration:none;" href="' + data[i + 40]['Event Link'] + '" target="_blank"><img src="' + data[i + 40]['Event Picture'] + '" style="height:100px;"/></a>');
+			} //end of loop
+
+		});
+
+	});
+
+</script>
+<link rel="stylesheet" href="slider/flexslider.css" type="text/css" media="screen" />
+<link href="slider/shCore.css" rel="stylesheet" type="text/css" />
+<link href="slider/shThemeDefault.css" rel="stylesheet" type="text/css" />
+<script src="slider/modernizr.js"></script>
+
+<div class="flexslider carousel" style="margin-top:35px;">
+</div>
+
+<div class="flexslider carousel">
+	<ul class="slides" id=row1>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+	</ul>
+</div>
+
+<div class="flexslider carousel">
+	<ul class="slides" id=row2>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+	</ul>
+</div>
+
+<div class="flexslider carousel">
+	<ul class="slides" id=row3>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+		<li>
+			<a style="text-decoration:none;" href="" target="_blank"><img src="" style="height:100px;" /></a>
+		</li>
+	</ul>
+</div>
+
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+
+<!-- FlexSlider -->
+<script defer src="slider/jquery.flexslider.js"></script>
+
+<script type="text/javascript">
+	$(function () {
+		SyntaxHighlighter.all();
+	});
+	$(window).load(function () {
+		$('.flexslider').flexslider({
+			animation: "slide",
+			animationLoop: false,
+			itemWidth: 200,
+			itemMargin: 20,
+			pausePlay: false,
+		});
+	});
+</script>
+
+<!-- Syntax Highlighter -->
+<script type="text/javascript" src="slider/shCore.js"></script>
+<script type="text/javascript" src="slider/shBrushXml.js"></script>
+<script type="text/javascript" src="slider/shBrushJScript.js"></script>
+
+<!-- Optional FlexSlider Additions -->
+<script src="slider/jquery.easing.js"></script>
+<script src="slider/jquery.mousewheel.js"></script>
+<script defer src="slider/demo.js"></script>
+
+</div>
